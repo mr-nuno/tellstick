@@ -7,6 +7,15 @@ var server = new Hapi.Server('0.0.0.0', 8000);
 // Add the route
 server.route({
     method: 'GET',
+    path: '/',
+    handler: function (request, reply) {
+      reply("hello tellstick!");
+    }
+});
+
+// Add the route
+server.route({
+    method: 'GET',
     path: '/device',
     handler: function (request, reply) {
       child.exec('/usr/bin/tdtool --list', function (err, stdout, stderr) {
