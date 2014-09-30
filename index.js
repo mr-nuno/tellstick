@@ -22,10 +22,9 @@ server.route({
     handler: function (request, reply) {
       var id = request.params.id.split(',');
       var action = request.params.action.split(',');
-        
+      console.log(id + ' ' + action);
       if (action == 'on') {
-
-	for(var i = 0; i < id.length; i++){
+        for(var i = 0; i < id.length; i++){
           child.exec('/usr/bin/tdtool --on ' + id[i], function () {
           
           });
