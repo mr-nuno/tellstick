@@ -7,7 +7,7 @@ var server = new Hapi.Server('0.0.0.0', 8000);
 // Add the route
 server.route({
     method: 'GET',
-    path: '/',
+    path: '/hello',
     handler: function (request, reply) {
       reply("hello tellstick!");
     }
