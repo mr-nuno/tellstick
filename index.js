@@ -19,8 +19,7 @@ server.route({
     path: '/device',
     handler: function (request, reply) {
       child.exec('/usr/bin/tdtool --list', function (err, stdout, stderr) {
-        console.log(stdout);
-        reply(stdout);
+        reply("stdout");
       });
     }
 });
