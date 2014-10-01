@@ -2,6 +2,6 @@
 
 module.exports = {
 	handler: function (request, reply) {
-    reply("hello tellstick 3!");
+    reply("hello tellstick 4!");
   }
 }
