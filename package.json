@@ -10,6 +10,7 @@
   "license": "ISC",
   "dependencies": {
     "gith": "^1.0.4",
+    "handlebars": "^2.0.0",
     "hapi": "^6.9.0"
   }
 }

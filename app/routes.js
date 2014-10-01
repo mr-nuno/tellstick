@@ -1,9 +1,15 @@
 'use strict'
 
+var viewController = require('./controllers/view');
 var helloController = require('./controllers/hello');
 var deviceController = require('./controllers/device');
 	
 module.exports = [
+	{
+    method: 'GET',
+    path: '/',
+		config: viewController.index
+  },
 	{
 	  method: 'GET',
 	  path: '/hello',
