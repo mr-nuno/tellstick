@@ -1,21 +1,11 @@
 'use strict'
 
-var path = require('path');
 var hapi = require('hapi');
 var routes = require('./app/routes');
-
-//server options
-var options = {
-    views: {
-        engines: {
-            html: require('handlebars')
-        },
-        path: path.join(__dirname, 'app/views')
-    }
-};
+var config = require('./app/config');
 
 //init hapi server
-var server = new hapi.Server('0.0.0.0', 8000, options);
+var server = new hapi.Server('0.0.0.0', 8000, config.server);
 
 //routes
 server.route(routes);

@@ -7,6 +7,27 @@ var deviceController = require('./controllers/device');
 module.exports = [
 	{
     method: 'GET',
+    path: '/js/{path*}',
+    handler: {
+      directory: { path: './public/js' }
+    }
+  },
+  {
+    method: 'GET',
+    path: '/css/{path*}',
+    handler: {
+      directory: { path: './public/css' }
+    }
+  },
+  {
+    method: 'GET',
+    path: '/images/{path*}',
+    handler: {
+      directory: { path: './public/images' }
+    }
+  },
+	{
+    method: 'GET',
     path: '/',
 		config: viewController.index
   },
