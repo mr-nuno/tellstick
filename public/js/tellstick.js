@@ -1,3 +1,6 @@
+/*
+* Tellstick view that handles all logic
+*/
 var TellstickView = new function(){
 	var self = this;
 	
