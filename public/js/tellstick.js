@@ -1,6 +1,6 @@
 /*
 * Tellstick view that handles all logic
-* TODO: more info...
+* TODO: more info.......
 */
 var TellstickView = new function(){
 	var self = this;
