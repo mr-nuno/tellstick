@@ -4,6 +4,7 @@ var path = require('path');
 
 module.exports = {
 	server: {
+		cors: true,
 		views: {
         engines: {
             html: require('handlebars')

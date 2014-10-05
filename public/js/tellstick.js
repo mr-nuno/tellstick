@@ -1,7 +1,5 @@
-/*
-* Tellstick view that handles all logic
-* TODO: more info.......
-*/
+'user strict'
+
 var TellstickView = new function(){
 	var self = this;
 	
