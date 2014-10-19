@@ -28,7 +28,7 @@ module.exports = {
           return devices;
         };
 
-        reply(parse(stdout));
+        reply(stdout);
       });
     }
 	},
