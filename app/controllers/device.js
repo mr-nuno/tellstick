@@ -6,7 +6,29 @@ module.exports = {
 	list : {
 		handler: function (request, reply) {
       child.exec('/usr/bin/tdtool --list', function (err, stdout, stderr) {
-        reply(stdout);
+
+        var parse = function(str) {
+          var devices = [];
+          for(var i = 0; i < 10; i++) {
+            var regEx = new RegExp("["+ i +"].Nexa:(.+)", "g");
+            var s = regEx.exec(data);
+            if (s) {
+              var arr = s[0].replace(/\s+/g, ' ').split(' ');
+              
+              var device = { 
+                id: arr.length > 0 ? arr[0] : 0,
+                name:  arr.length > 1 ? arr[1] : 0,
+                on: arr.length > 2 && arr[2] == "ON" ? true : false
+              };
+
+              devices.push(device);
+            }
+          };
+
+          return devices;
+        };
+
+        reply(parse(stdout));
       });
     }
 	},
