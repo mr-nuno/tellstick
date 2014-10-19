@@ -11,7 +11,7 @@ module.exports = {
           var devices = [];
           for(var i = 0; i < 10; i++) {
             var regEx = new RegExp("["+ i +"].Nexa:(.+)", "g");
-            var s = regEx.exec(data);
+            var s = regEx.exec(str);
             if (s) {
               var arr = s[0].replace(/\s+/g, ' ').split(' ');
               
@@ -28,7 +28,7 @@ module.exports = {
           return devices;
         };
 
-        reply(stdout);
+        reply(parse(stdout));
       });
     }
 	},
